@@ -272,6 +272,7 @@ public class JUnitTest
 		@Test
 		public void test03() 
 		{
+			System.out.println("Inside second test");
 			Assert.assertTrue(true);			
 			
 		}
