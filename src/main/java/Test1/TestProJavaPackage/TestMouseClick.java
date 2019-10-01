@@ -1,4 +1,4 @@
-package Test1.TestPro;
+package Test1.TestProJavaPackage;
 import java.awt.AWTException;
 import java.awt.Button;
 import java.awt.Robot;

@@ -1,4 +1,4 @@
-package Test1.TestPro;
+package Test1.TestProTestPackage;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -8,6 +8,7 @@ import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,7 +25,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class JUnitTest  
+public class JUnit1Test  
 {
 	static WebDriver driver;
 	
@@ -273,7 +274,15 @@ public class JUnitTest
 		public void test03() 
 		{
 			System.out.println("Inside second test");
-			Assert.assertTrue(true);			
+			Assert.assertTrue(false);			
+			
+		}
+		
+		@Test
+		public void test04() 
+		{
+			System.out.println("Inside third test");
+			Assert.assertTrue(false);			
 			
 		}
 	

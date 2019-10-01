@@ -1,4 +1,4 @@
-package Test1.TestPro;
+package Test1.TestProJavaPackage;
 
 public class TestException {
 

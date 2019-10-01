@@ -1,4 +1,4 @@
-package Test1.TestPro;
+package Test1.TestProJavaPackage;
 
 import java.util.ArrayList;
 import java.util.Collection;
