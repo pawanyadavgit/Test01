@@ -264,14 +264,14 @@ public class JUnit3Test
 		}
 		
 		@Test
-		public void test02() 
+		public void test05() 
 		{
 			Assert.assertTrue(true);			
 			
 		}
 		
 		@Test
-		public void test03() 
+		public void test06() 
 		{
 			System.out.println("Inside second test");
 			Assert.assertTrue(false);			
@@ -279,7 +279,7 @@ public class JUnit3Test
 		}
 		
 		@Test
-		public void test04() 
+		public void test07() 
 		{
 			System.out.println("Inside third test");
 			Assert.assertTrue(false);			
