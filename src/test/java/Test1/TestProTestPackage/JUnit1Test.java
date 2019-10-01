@@ -281,7 +281,7 @@ public class JUnit1Test
 		@Test
 		public void test04() 
 		{
-			System.out.println("Inside third test-->");
+			System.out.println("Inside third test--->");
 			Assert.assertTrue(false);			
 			
 		}
