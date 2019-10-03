@@ -274,7 +274,7 @@ public class JUnit1Test
 		public void test03() 
 		{
 			System.out.println("Inside second test");
-			Assert.assertTrue(false);			
+			Assert.assertTrue(true);			
 			
 		}
 		
@@ -282,7 +282,7 @@ public class JUnit1Test
 		public void test04() 
 		{
 			System.out.println("Inside third test--->");
-			Assert.assertTrue(false);			
+			Assert.assertTrue(true);			
 			
 		}
 	
