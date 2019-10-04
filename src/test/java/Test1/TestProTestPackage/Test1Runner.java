@@ -1,5 +1,7 @@
 package Test1.TestProTestPackage;
 
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -10,11 +12,11 @@ import org.junit.runners.Suite;
 	})
 public class Test1Runner
 {	
-//    public static void main( String[] args )
-//    {        
-//    	System.out.println("Running tests-->");
-//        Result result = JUnitCore.runClasses(JUnit1Test.class);
-//        System.out.println("No of failed tests-->"+result.getFailureCount());
-//        
-//    }
+    public static void main( String[] args )
+    {        
+    	System.out.println("Running tests-->");
+        Result result = JUnitCore.runClasses(JUnit1Test.class);
+        System.out.println("No of failed tests-->"+result.getFailureCount());
+        
+    }
 }
