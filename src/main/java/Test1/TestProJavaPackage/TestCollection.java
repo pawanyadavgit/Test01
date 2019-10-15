@@ -1,11 +1,13 @@
 package Test1.TestProJavaPackage;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -16,8 +18,26 @@ public class TestCollection {
 	public static void main(String[] args) {
 		
 //		testSet();
-		testMap();		
+//		testMap();
+		testList();
 	
+	}
+
+	private static void testList() {
+		List<Integer> ls = new ArrayList<Integer>();
+		ls.add(5);
+		ls.add(52);
+		ls.add(4);
+		ls.add(63);
+//		String[] arr = {"sdsd","sdswd"};
+		
+		Integer [] arr = ls.toArray(new Integer[0]);
+		
+		for(Integer s: arr)
+		{
+			System.out.println(s);
+		}
+		
 	}
 
 	private static void testMap() {
@@ -51,8 +71,8 @@ public class TestCollection {
 	}
 
 	private static void testSet() {
-		Set<String> s = new HashSet<String>();
-//		Set<String> s = new LinkedHashSet<String>();
+//		Set<String> s = new HashSet<String>();
+		Set<String> s = new LinkedHashSet<String>();
 //		Set<String> s = new TreeSet<String>();
 		s.add("one");
 		s.add("two");		

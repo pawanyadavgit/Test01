@@ -73,15 +73,18 @@ public class JUnit1Test
 		Thread.sleep(5000);
     }
 	
-//	@Test
+//	@Test 
     public void testWaits()
     {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         
         WebElement  ele = driver.findElement(By.id("jkjhj"));
+        
+//      	Explicit wait  
         WebDriverWait wait = new WebDriverWait(driver, 35);        
         wait.until(ExpectedConditions.visibilityOf(ele));
         
+//      	Fluent wait
         Wait<WebDriver> wt = new FluentWait<WebDriver>(driver)
         		.withTimeout(20, TimeUnit.SECONDS)
         		.pollingEvery(1, TimeUnit.SECONDS)
@@ -262,6 +265,8 @@ public class JUnit1Test
 			if(e.isDisplayed())
 				System.out.println(e.getAttribute("title"));			 
 		}
+		
+		
 		
 		@Test
 		public void test02() 
