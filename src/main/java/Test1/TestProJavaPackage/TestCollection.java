@@ -19,8 +19,14 @@ public class TestCollection {
 		
 //		testSet();
 //		testMap();
-		testList();
+//		testList();
+		testHashTable();
 	
+	}
+
+	private static void testHashTable() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	private static void testList() {
