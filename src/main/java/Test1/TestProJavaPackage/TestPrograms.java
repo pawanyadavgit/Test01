@@ -1,8 +1,6 @@
 package Test1.TestProJavaPackage;
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,7 +23,7 @@ public class TestPrograms {
 	private static void pratikshaProgram() {
 		int [] arr = {5,-4,8,6,0,-7,2};
 		List<Integer> lsPos = new ArrayList<Integer>();		
-		Map<Integer,Integer> map = new HashMap<>();
+		Map<Integer,Integer> map = new HashMap<Integer,Integer>();
 		
 		for (int i = 0; i < arr.length; i++) {
 			if(arr[i]<0)

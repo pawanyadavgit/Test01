@@ -271,7 +271,7 @@ public class JUnit1Test
 				System.out.println(e.getAttribute("title"));			 
 		}
 		
-		@Test
+//		@Test
 		public void testDatePicker() throws InterruptedException, IOException
 		{
 			driver.get("http://demo.guru99.com/test/");
@@ -283,13 +283,25 @@ public class JUnit1Test
 			if(dt.isDisplayed())
 				System.out.println("date picker is displayed");
 			dt.sendKeys("03071992 1236PM");
-			Thread.sleep(2000);
-			
+			Thread.sleep(2000);			
+		}
+		
+		@Test
+		public void testScreenshot()
+		{
+			driver.get("http://www.google.com");
+			System.out.println(driver.getTitle());
 			TakesScreenshot sc = (TakesScreenshot) driver;
 			File fl = sc.getScreenshotAs(OutputType.FILE);
 //			FileUtils.getFile(fl, "C:\\Users\\pawan.yadav\\Desktop\\screenShotTesting.JPEG");
-			FileUtils.copyFile(fl, new File("C:\\Users\\pawan.yadav\\Desktop\\screenShotTesting.JPEG"));
+			try {
+				FileUtils.copyFile(fl, new File("C:\\Users\\pawan.yadav\\Desktop\\screenShotTesting.JPEG"));
+			} catch (IOException e) {
+				System.out.println("Exception-->"+e.getMessage());
+			}
 		}
+		
+		
 		
 		
 //		@Test

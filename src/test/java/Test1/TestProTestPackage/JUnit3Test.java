@@ -263,14 +263,14 @@ public class JUnit3Test
 				System.out.println(e.getAttribute("title"));			 
 		}
 		
-		@Test
+//		@Test
 		public void test05() 
 		{
 			Assert.assertTrue(true);			
 			
 		}
 		
-		@Test
+//		@Test
 		public void test06() 
 		{
 			System.out.println("Inside second test");
@@ -278,7 +278,7 @@ public class JUnit3Test
 			
 		}
 		
-		@Test
+//		@Test
 		public void test07() 
 		{
 			System.out.println("Inside third test");
