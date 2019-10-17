@@ -1,16 +1,21 @@
 package Test1.TestProTestPackage;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -32,7 +37,7 @@ public class JUnit1Test
 	@FindBy(xpath="sfsf")	
 	WebElement ele1;
 	
-//	@BeforeClass
+	@BeforeClass
 	public static void setUp()
 	{
 		System.out.println("Inside setup--> setting up chrome driver");
@@ -40,7 +45,7 @@ public class JUnit1Test
 		driver = new ChromeDriver(); 
 	}
 	
-//	@AfterClass
+	@AfterClass
 	public static void tearDown() throws InterruptedException
 	{	System.out.println("Inside tear down");
 		System.out.println("Closing browser");
@@ -266,29 +271,45 @@ public class JUnit1Test
 				System.out.println(e.getAttribute("title"));			 
 		}
 		
-		
-		
 		@Test
+		public void testDatePicker() throws InterruptedException, IOException
+		{
+			driver.get("http://demo.guru99.com/test/");
+			Thread.sleep(2000);
+//			System.out.println("Window habdles-->"+driver.getWindowHandle());
+			Set<String> wh = driver.getWindowHandles();
+			System.out.println(wh.size());
+			WebElement dt = driver.findElement(By.xpath("//input[contains(@name,'bday')]"));
+			if(dt.isDisplayed())
+				System.out.println("date picker is displayed");
+			dt.sendKeys("03071992 1236PM");
+			Thread.sleep(2000);
+			
+			TakesScreenshot sc = (TakesScreenshot) driver;
+			File fl = sc.getScreenshotAs(OutputType.FILE);
+//			FileUtils.getFile(fl, "C:\\Users\\pawan.yadav\\Desktop\\screenShotTesting.JPEG");
+			FileUtils.copyFile(fl, new File("C:\\Users\\pawan.yadav\\Desktop\\screenShotTesting.JPEG"));
+		}
+		
+		
+//		@Test
 		public void test02() 
 		{
 			Assert.assertTrue(true);			
-			
 		}
 		
-		@Test
+//		@Test
 		public void test03() 
 		{
 			System.out.println("Inside second test");
 			Assert.assertTrue(true);			
-			
 		}
 		
-		@Test
+//		@Test
 		public void test04() 
 		{
 			System.out.println("Inside third test--->");
 			Assert.assertTrue(true);			
-			
 		}
 	
 }
